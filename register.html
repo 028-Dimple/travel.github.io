@@ -1,0 +1,134 @@
+<html>
+<head>
+	<title>Register</title>
+	<link rel = "stylesheet" href = "style1.css" type = "text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+<body>
+	<div class ="Registerbox">
+		<img src = "images/login.png" class = "image">
+		<h1> Register Here</h1>
+		<form id="form" action="connection.php" onsubmit = "return validate()" method="post">
+		 <div class ="form-control">
+			<p> Username </p>
+			<input type = "text" name="username" placeholder="Enter Username" id = "user" autocomplete="off">
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small> Error Message </small>
+		 </div>
+
+		  <div class ="form-control">
+			<p> Email </p>
+			<input type = "email" name="email" placeholder="Enter Email" id="email" autocomplete="off">
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small> Error Message </small>
+			</div>
+
+			<div class ="form-control">
+			<p> Password </p>
+			<input type = "password" name="password" placeholder="Enter Password" id="password">
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small> Error Message </small>
+		</div>
+
+			<div class ="form-control">
+			<p> Confirm Password </p>
+			<input type = "password" name="cpassword" placeholder="Confirm Password" id="cpassword" >
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small> Error Message </small>
+		</div>
+
+			<input type = "submit" name="" value ="Register">
+			<a href = "home.html"> Try Guest Login </a>
+		</form>
+	</div>
+
+	<script type = "text/javascript">
+		const form = document.getElementById('form');
+		const username = document.getElementById('user');
+		const email = document.getElementById('email');
+		const password = document.getElementById('password');
+		const cpassword = document.getElementById('cpassword');
+
+		
+
+		function validate()
+		{
+			const usernameVal = username.value.trim();
+			const emailVal = email.value.trim();
+			const passwordVal = password.value.trim();
+			const cpasswordVal = cpassword.value.trim();
+
+			if(usernameVal === "")
+			{
+				setError(username, "Please fill this field");
+			}
+			else if(usernameVal.length <=2)
+			{
+				setError(username, "Minimum 3 characters");
+			}
+			else
+			{
+				setSuccess(username);
+			}
+
+			if(emailVal === "")
+			{
+				setError(email, "Please fill this field");
+			}
+			else
+			{
+				setSuccess(email);
+			}
+
+			if(passwordVal === "")
+			{
+				setError(password, "Please fill this field");
+			}
+			else if(passwordVal.length <=7)
+			{
+				setError(password, "Minimum 8 characters");
+			}
+			else
+			{
+				setSuccess(password);
+			}
+
+			if(cpasswordVal === "")
+			{
+				setError(cpassword, "Please fill this field");
+			}
+			else if(passwordVal !== cpasswordVal)
+			{
+				setError(cpassword, "Password does not match");
+			}
+			else
+			{
+				setSuccess(cpassword);
+			}
+
+		}
+
+		function setError(input, message){
+			const formControl = input.parentElement;
+			const small = formControl.querySelector('small');
+
+			small.innerText = message;
+			formControl.className = 'form-control error';
+		}
+
+
+		function setSuccess(input){
+			const formControl = input.parentElement;
+
+			formControl.className = 'form-control success';
+		}
+
+	</script>
+
+
+</body>
+</html>

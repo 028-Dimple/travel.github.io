@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+ul{
+	list-style-type: none;
+	float: right;
+	margin-top: 60px;
+}
+
+ul li{
+	display: inline-block;
+	margin: 5px;
+}
+
+ul li a{
+	text-decoration: none;
+	font-weight: lighter;
+	font-size: 25px; 
+	padding: 5px 20px;
+	color: black;
+	transition: 0.6s ease;
+	border-radius: 5px;
+}
+
+ul li a:hover{
+	color: white;
+	background-color: #5dade2;
+}
+
+.main{
+	max-width: 1200px;
+	margin: auto;
+}
+
+.logo img{
+	float: left;
+	width: 150px;
+	height: auto;
+}
+
+.title
+{
+	background-color: #3498db ;
+	text-align:center;
+	color:white;
+}
+
+.title h3{
+	font-size: 30px;
+	font-family: MV Boli;
+}
+.slide{
+	height:650px;
+
+}
+
+.nav-link:hover{
+	color:white !important;
+}
+.heading{
+	font-size:120px;
+	font-family: "Forte";
+}
+.sliderimg{
+	opacity:0.5;
+}

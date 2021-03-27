@@ -1,0 +1,86 @@
+<html>
+<head>
+	<title>Login</title>
+	<link rel = "stylesheet" type = "text/css" href = "style1.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+<body>
+	<div class ="loginbox">
+		<img src ="images/login.png" class ="image">
+		<h1> Login Here</h1>
+		<form id="form">
+		  <div class ="form-control">
+			<p> Username </p>
+			<input type = "text" name ="" placeholder="Enter Username" id="user">
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small> Error Message </small>
+		  </div>
+
+		  <div class ="form-control">
+			<p> Password </p>
+			<input type = "password" name = "" placeholder="Enter Password" id="password">
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small> Error Message </small>
+		  </div>
+
+			<input type = "submit" name="" value ="Login">
+			<a href = "home.html"> Try Guest Login</a><br>
+			<a href = "register.html"> Don't have an account? </a>
+		</form>
+	</div>
+
+	<script type = "text/javascript">
+		const form = document.getElementById('form');
+		const username = document.getElementById('user');
+		const password = document.getElementById('password');
+
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			validate();
+		});
+
+		function validate()
+		{
+			const usernameVal = username.value.trim();
+			const passwordVal = password.value.trim();
+
+			if(usernameVal === "")
+			{
+				setError(username, "Please fill this field");
+			}
+			else
+			{
+				setSuccess(username);
+			}
+
+			if(passwordVal === "")
+			{
+				setError(password, "Please fill this field");
+			}
+			else
+			{
+				setSuccess(password);
+			}
+
+			function setError(input, message){
+			const formControl = input.parentElement;
+			const small = formControl.querySelector('small');
+
+			small.innerText = message;
+			formControl.className = 'form-control error';
+		}
+
+
+		function setSuccess(input){
+			const formControl = input.parentElement;
+
+			formControl.className = 'form-control success';
+		}
+		}
+	</script>
+
+
+</body>
+</html>

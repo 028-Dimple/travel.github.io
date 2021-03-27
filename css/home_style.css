@@ -1,0 +1,169 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+ul{
+	list-style-type: none;
+	float: right;
+	margin-top: 60px;
+}
+
+ul li{
+	display: inline-block;
+	margin: 5px;
+}
+
+ul li a{
+	text-decoration: none;
+	font-weight: lighter;
+	font-size: 25px; 
+	padding: 5px 20px;
+	color: black;
+	transition: 0.6s ease;
+	border-radius: 5px;
+}
+
+ul li a:hover{
+	color: white;
+	background-color: #5dade2;
+}
+
+.main{
+	max-width: 1200px;
+	margin: auto;
+}
+
+.logo img{
+	float: left;
+	width: 150px;
+	height: auto;
+}
+
+.title
+{
+	background-color: #3498db ;
+	
+	
+	
+}
+
+.title h3{
+	font-size: 20px;
+	color:white;
+	text-align:right;
+	padding:5px;
+	font-family: MV boli;
+}
+.slide{
+	height:650px;
+
+}
+
+.nav-link:hover{
+	color:white !important;
+}
+.heading{
+	font-size:120px;
+	font-family:cursive;
+}
+
+.expbtn{
+	background:#3498db ;
+	color:white;
+	padding:18px 41px;
+	border:1px solid #3498db ;
+	border-radius:10px;
+	font-family: rubik,sans-serif;
+	
+}
+.banner-text{
+	margin-bottom:80px;
+}
+.expbtn:hover{
+	background:#ff4a52;
+	color:white;
+	text-decoration:none;
+	border:1px solid #ff4a52;
+}
+.populardestination{
+	text-align:center;
+	font-family:rubik,sans-serif;
+	padding-top:140px;
+	padding-bottom:40px;
+}
+.d{
+	position:relative;
+}
+.d img{
+	width:100%;
+	height:250px;
+	border-radius:10px;
+	
+	margin-bottom:35px;
+}
+.populardestination h3{
+	font-size:38px;
+}
+.dtext{
+	position:absolute;
+	bottom:50px;
+	left:50px;
+}
+.dtextp{
+	color:white;
+	font-weight:500;
+	font-size:25px;
+}
+.dtextp a{
+	color:white;
+	font-weight:500;
+	font-size:11px;
+	background:#3498db ;
+	border-radius:15px;
+	padding:8px 15px;
+}
+.footer{
+	background:#040E27;
+	color:white;
+	padding:20px 0px;
+}
+.footerimg{
+	display:inline-block;
+}
+.footercontact li{
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+.footer1{
+	background:#000206;
+	padding:10px;
+	color:white;
+	text-align:center;
+	vertical-align:middle;
+}
+.footercompany li{
+	display:block;
+	
+}
+.footerheading{
+	margin:30px 0px 30px 0px;
+}
+.footer p{font-size:15px;}
+.fas{margin-right:10px;}
+.fab{margin-right:15px;
+font-size:18px;
+margin-top:15px;}
+.single-insta{
+width: 33.33%;
+float: left;
+padding: 7.5px;
+overflow: hidden;
+}
+.single-insta img{
+	vertical-align: middle;
+border-style: none;
+border-radius: 5px;
+width:100%;
+height:70px;
+}
